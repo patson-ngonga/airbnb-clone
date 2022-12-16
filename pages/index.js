@@ -27,7 +27,12 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4">
             {exploreData?.map(({ img, distance, location }) => (
-              <SmallCards img={img} distance={distance} location={location} />
+              <SmallCards
+                key={img}
+                img={img}
+                distance={distance}
+                location={location}
+              />
             ))}
           </div>
         </section>
